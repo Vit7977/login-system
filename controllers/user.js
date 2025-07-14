@@ -35,6 +35,25 @@ export const UserController = {
       res.status(500).json(error);
     }
   },
+  async login(req, res) {
+    try {
+      const { email, senha } = req.body;
+
+      if (!email || !senha) {
+        return res.status(400).json({ error: "All fields required!" });
+      }
+
+      const result = await User.login(email, senha);
+
+      if (!result) {
+        return res.status(401).json({ error: "Invalid credentials!" });
+      }
+
+      return res.status(200).json({ message: "User logged!", data: result });
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  },
   async updateUser(req, res) {
     try {
       const { nome, email, senha, data_nasc } = req.body;

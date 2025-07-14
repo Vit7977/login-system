@@ -1,4 +1,5 @@
 import { pool } from "../db/pool.js";
+import bcrypt from "bcrypt";
 
 export const User = {
   async getUsers() {
@@ -18,6 +19,26 @@ export const User = {
           [data.nome, data.email, data.senha, data.data_nasc]
         );
       return newUser;
+    } catch (error) {
+      throw error;
+    }
+  },
+  async login(email, pass) {
+    try {
+      const [result] = await pool
+        .promise()
+        .execute(`SELECT * FROM usuario WHERE email = ?`, [email]);
+
+      if (result.length === 0) return false;
+
+      if (result[0]) {
+        let usuario = result[0];
+        const validPass = await bcrypt.compare(pass, usuario.senha);
+        if (validPass) {
+          usuario.senha = "";
+          return usuario;
+        }
+      }
     } catch (error) {
       throw error;
     }
