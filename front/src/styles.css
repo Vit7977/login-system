@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(141, 141, 141);
+}
+
+.form-cad-container {
+  display: flex;
+  flex-direction: column;
+  width: 22rem;
+  background-color: rgb(240, 240, 240);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px 5px rgb(0, 0, 0, 0.6);
+}
+
+.form-cad-container h1 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.form-cad {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.form-cad input {
+  border-bottom: 1px solid rgb(0, 0, 0);
+  background: transparent;
+  outline: none;
+  padding: 3px;
+  width: 9rem;
+  transition: 0.3s;
+}
+
+.form-cad input::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.form-cad input[type="date"] {
+  color: rgb(0, 0, 0);
+}
+
+.form-cad input:focus {
+  border-bottom: 1px solid rgb(17, 153, 69);
+}
+
+.icon-eye {
+  color: rgb(0, 0, 0);
+}
+
+.btn-cad {
+  background-color: rgb(201, 201, 201);
+  padding: 0.7rem;
+  width: 190px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-cad:hover {
+  scale: 1.1;
+  background-color: rgb(17, 153, 69);
+}

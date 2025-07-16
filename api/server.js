@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import { router as UserRouter } from "../routes/user.js";
-import { router as Autentication } from "../routes/autenticacao.js";
+import { router as UserRouter } from "./routes/user.js";
+import { router as Autentication } from "./routes/autenticacao.js";
 
 dotenv.config();
 
