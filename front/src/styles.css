@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Funnel Display", sans-serif;
 }
 
 body {
@@ -32,6 +34,8 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
 
@@ -39,7 +43,7 @@ body {
   border-bottom: 1px solid rgb(0, 0, 0);
   background: transparent;
   outline: none;
-  padding: 3px;
+  padding: 5px;
   width: 9rem;
   transition: 0.3s;
 }
@@ -53,22 +57,101 @@ body {
 }
 
 .form-cad input:focus {
-  border-bottom: 1px solid rgb(17, 153, 69);
+  border-bottom: 1px solid rgba(17, 87, 153, 1);
 }
 
 .icon-eye {
   color: rgb(0, 0, 0);
+  margin-left: -1.2rem;
 }
 
 .btn-cad {
   background-color: rgb(201, 201, 201);
   padding: 0.7rem;
-  width: 190px;
+  width: 90%;
   border-radius: 8px;
   transition: 0.3s;
+  font-weight: bold;
 }
 
 .btn-cad:hover {
   scale: 1.1;
+  background-color: rgba(17, 87, 153, 1);
+  color: white;
+}
+
+
+
+.form-login-container {
+  display: flex;
+  flex-direction: column;
+  width: 22rem;
+  background-color: rgb(240, 240, 240);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px 5px rgb(0, 0, 0, 0.6);
+}
+
+.form-login-container h1 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.form-login {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-login input {
+  border-bottom: 1px solid rgb(0, 0, 0);
+  background: transparent;
+  outline: none;
+  padding: 5px;
+  width: 90%;
+  transition: 0.3s;
+  align-self: center;
+}
+
+.form-login div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-login input::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.form-login input:focus {
+  border-bottom: 1px solid rgb(17, 153, 69);
+}
+
+.btn-login {
+  background-color: rgb(201, 201, 201);
+  padding: 0.7rem;
+  width: 90%;
+  border-radius: 8px;
+  transition: 0.3s;
+  align-self: center;
+}
+
+.btn-login:hover {
+  scale: 1.1;
   background-color: rgb(17, 153, 69);
+}
+
+.text-login {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.text-login a {
+  color: rgba(17, 87, 153, 1);
+  text-decoration: none;
+}
+
+.text-login a:hover {
+  text-decoration: underline;
 }

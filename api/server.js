@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/api/user", UserRouter);
-app.use("/user/login", Autentication);
+app.use("/api/user/login", Autentication);
 
 app.listen(PORT, () => {
   console.log(`App open at http://localhost:${PORT}`);
